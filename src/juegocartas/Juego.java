@@ -14,44 +14,44 @@ public class Juego {
     // El método agrega el ataque y defensa de una carta utilizada a los totales del jugador
     public static void sumarCarta(int num) {
         switch (num) {
-            case 1:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta1.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta1.defensa;
-                break;
-            case 2:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta2.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta2.defensa;
-                break;
-            case 3:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta3.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta3.defensa;
-                break;
-            case 4:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta4.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta4.defensa;
-                break;
-            case 5:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta5.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta5.defensa;
-                break;
-            case 6:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta6.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta6.defensa;
-                break;
-            case 7:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta7.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta7.defensa;
-                break;
-            case 8:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta8.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta8.defensa;
-                break;
-            case 9:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta9.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta9.defensa;
-                break;
-            default:
-                break;
+            case 1 -> {
+                juegoUsuario.sumaAtaque += Carta.carta1.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta1.defensa;
+            }
+            case 2 -> {
+                juegoUsuario.sumaAtaque += Carta.carta2.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta2.defensa;
+            }
+            case 3 -> {
+                juegoUsuario.sumaAtaque += Carta.carta3.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta3.defensa;
+            }
+            case 4 -> {
+                juegoUsuario.sumaAtaque += Carta.carta4.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta4.defensa;
+            }
+            case 5 -> {
+                juegoUsuario.sumaAtaque += Carta.carta5.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta5.defensa;
+            }
+            case 6 -> {
+                juegoUsuario.sumaAtaque += Carta.carta6.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta6.defensa;
+            }
+            case 7 -> {
+                juegoUsuario.sumaAtaque += Carta.carta7.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta7.defensa;
+            }
+            case 8 -> {
+                juegoUsuario.sumaAtaque += Carta.carta8.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta8.defensa;
+            }
+            case 9 -> {
+                juegoUsuario.sumaAtaque += Carta.carta9.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta9.defensa;
+            }
+            default -> {
+            }
         }
     }
 
@@ -155,44 +155,44 @@ public class Juego {
     // El método agrega el ataque y defensa de una carta utilizada a los totales
     public static void sumarCartaOponente(int numo) {
         switch (numo) {
-            case 1:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta01.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta01.defensa;
-                break;
-            case 2:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta02.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta02.defensa;
-                break;
-            case 3:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta03.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta03.defensa;
-                break;
-            case 4:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta04.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta04.defensa;
-                break;
-            case 5:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta05.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta05.defensa;
-                break;
-            case 6:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta06.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta06.defensa;
-                break;
-            case 7:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta07.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta07.defensa;
-                break;
-            case 8:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta08.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta08.defensa;
-                break;
-            case 9:
-                juegoUsuario.sumaAtaque += juegocartas.Carta.carta09.ataque;
-                juegoUsuario.sumaDefensa += juegocartas.Carta.carta09.defensa;
-                break;
-            default:
-                break;
+            case 1 -> {
+                juegoUsuario.sumaAtaque += Carta.carta01.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta01.defensa;
+            }
+            case 2 -> {
+                juegoUsuario.sumaAtaque += Carta.carta02.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta02.defensa;
+            }
+            case 3 -> {
+                juegoUsuario.sumaAtaque += Carta.carta03.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta03.defensa;
+            }
+            case 4 -> {
+                juegoUsuario.sumaAtaque += Carta.carta04.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta04.defensa;
+            }
+            case 5 -> {
+                juegoUsuario.sumaAtaque += Carta.carta05.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta05.defensa;
+            }
+            case 6 -> {
+                juegoUsuario.sumaAtaque += Carta.carta06.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta06.defensa;
+            }
+            case 7 -> {
+                juegoUsuario.sumaAtaque += Carta.carta07.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta07.defensa;
+            }
+            case 8 -> {
+                juegoUsuario.sumaAtaque += Carta.carta08.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta08.defensa;
+            }
+            case 9 -> {
+                juegoUsuario.sumaAtaque += Carta.carta09.ataque;
+                juegoUsuario.sumaDefensa += Carta.carta09.defensa;
+            }
+            default -> {
+            }
         }
     }
 
