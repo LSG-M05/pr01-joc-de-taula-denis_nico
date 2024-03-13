@@ -1,7 +1,7 @@
 package juegocartas;
 import java.util.Random;
 
-// Esta clase se encarga de administrar los juegos de los participantes y sumar los puntos de cada juego
+//Esta clase se encarga de administrar los juegos de los participantes y sumar los puntos de cada juego
 public class Juego {
 
     public int cartaUsada; // Aquí guardamos las cartas elegidas por los jugadores
