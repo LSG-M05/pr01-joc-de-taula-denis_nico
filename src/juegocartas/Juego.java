@@ -2,7 +2,7 @@ package juegocartas;
 import java.util.Random;
 
 // Esta clase se encarga de administrar los juegos de los participantes y sumar los puntos de cada juego
-public class Juego {
+public class  Juego {
 
     public int cartaUsada; // Aquí guardamos las cartas elegidas por los jugadores
     public int sumaAtaque; // Aquí guardamos el total de ataque en una ronda de los jugadores
@@ -66,7 +66,7 @@ public class Juego {
     public static void verificarCartaOponente(int num) {
         switch (num) {
             case 1:
-                if (juegocartas.Carta.carta01.activa == true) {
+                if (Carta.carta01.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta01.activa = true;
@@ -75,7 +75,7 @@ public class Juego {
                 }
                 break;
             case 2:
-                if (juegocartas.Carta.carta02.activa == true) {
+                if (Carta.carta02.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta02.activa = true;
@@ -84,7 +84,7 @@ public class Juego {
                 }
                 break;
             case 3:
-                if (juegocartas.Carta.carta03.activa == true) {
+                if (Carta.carta03.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta03.activa = true;
@@ -93,7 +93,7 @@ public class Juego {
                 }
                 break;
             case 4:
-                if (juegocartas.Carta.carta04.activa == true) {
+                if (Carta.carta04.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta04.activa = true;
@@ -102,7 +102,7 @@ public class Juego {
                 }
                 break;
             case 5:
-                if (juegocartas.Carta.carta05.activa == true) {
+                if (Carta.carta05.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta05.activa = true;
@@ -111,7 +111,7 @@ public class Juego {
                 }
                 break;
             case 6:
-                if (juegocartas.Carta.carta06.activa == true) {
+                if (Carta.carta06.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta06.activa = true;
@@ -121,7 +121,7 @@ public class Juego {
                 break;
 
             case 7:
-                if (juegocartas.Carta.carta07.activa == true) {
+                if (Carta.carta07.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta07.activa = true;
@@ -130,7 +130,7 @@ public class Juego {
                 }
                 break;
             case 8:
-                if (juegocartas.Carta.carta08.activa == true) {
+                if (Carta.carta08.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta08.activa = true;
@@ -139,7 +139,7 @@ public class Juego {
                 }
                 break;
             case 9:
-                if (juegocartas.Carta.carta09.activa == true) {
+                if (Carta.carta09.activa) {
                     respuestaOponente();
                 } else {
                     juegocartas.Carta.carta09.activa = true;
@@ -156,43 +156,44 @@ public class Juego {
     public static void sumarCartaOponente(int numo) {
         switch (numo) {
             case 1 -> {
-                juegoUsuario.sumaAtaque += Carta.carta01.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta01.defensa;
+                juegoOponente.sumaAtaque += Carta.carta01.ataque;
+                juegoOponente.sumaDefensa += Carta.carta01.defensa;
             }
             case 2 -> {
-                juegoUsuario.sumaAtaque += Carta.carta02.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta02.defensa;
+                juegoOponente.sumaAtaque += Carta.carta02.ataque;
+                juegoOponente.sumaDefensa += Carta.carta02.defensa;
             }
             case 3 -> {
-                juegoUsuario.sumaAtaque += Carta.carta03.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta03.defensa;
+                juegoOponente.sumaAtaque += Carta.carta03.ataque;
+                juegoOponente.sumaDefensa += Carta.carta03.defensa;
             }
             case 4 -> {
-                juegoUsuario.sumaAtaque += Carta.carta04.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta04.defensa;
+                juegoOponente.sumaAtaque += Carta.carta04.ataque;
+                juegoOponente.sumaDefensa += Carta.carta04.defensa;
             }
             case 5 -> {
-                juegoUsuario.sumaAtaque += Carta.carta05.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta05.defensa;
+                juegoOponente.sumaAtaque += Carta.carta05.ataque;
+                juegoOponente.sumaDefensa += Carta.carta05.defensa;
             }
             case 6 -> {
-                juegoUsuario.sumaAtaque += Carta.carta06.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta06.defensa;
+                juegoOponente.sumaAtaque += Carta.carta06.ataque;
+                juegoOponente.sumaDefensa += Carta.carta06.defensa;
             }
             case 7 -> {
-                juegoUsuario.sumaAtaque += Carta.carta07.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta07.defensa;
+                juegoOponente.sumaAtaque += Carta.carta07.ataque;
+                juegoOponente.sumaDefensa += Carta.carta07.defensa;
             }
             case 8 -> {
-                juegoUsuario.sumaAtaque += Carta.carta08.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta08.defensa;
+                juegoOponente.sumaAtaque += Carta.carta08.ataque;
+                juegoOponente.sumaDefensa += Carta.carta08.defensa;
             }
             case 9 -> {
-                juegoUsuario.sumaAtaque += Carta.carta09.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta09.defensa;
+                juegoOponente.sumaAtaque += Carta.carta09.ataque;
+                juegoOponente.sumaDefensa += Carta.carta09.defensa;
             }
             default -> {
             }
+
         }
     }
 
@@ -223,7 +224,7 @@ public class Juego {
                 juegoUsuario.rondasGanadas++;
             } else if (juegoUsuario.sumaAtaque == juegoOponente.sumaDefensa) {
                 System.out.println("La ronda está empatada!");
-            } else if (juegoUsuario.sumaAtaque < juegoOponente.sumaDefensa) {
+            } else {
                 System.out.println("Has perdido la ronda!");
                 juegoOponente.rondasGanadas++;
             }
@@ -238,7 +239,7 @@ public class Juego {
                 juegoUsuario.rondasGanadas++;
             } else if (juegoUsuario.sumaDefensa == juegoOponente.sumaAtaque) {
                 System.out.println("La ronda está empatada!");
-            } else if (juegoUsuario.sumaDefensa < juegoOponente.sumaAtaque) {
+            } else {
                 System.out.println("Has perdido la ronda!");
                 juegoOponente.rondasGanadas++;
             }

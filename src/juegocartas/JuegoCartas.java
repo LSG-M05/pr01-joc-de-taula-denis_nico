@@ -30,7 +30,7 @@ public class JuegoCartas {
             numTurno = 0;
             juegocartas.Juego.resetearValoresJuego();
             System.out.println();
-            System.out.println("Quieres jugar otra partida?");
+            System.out.println("Quieres jugar otra partida? 1 - Si / 2 - No");
             respuesta = sc.nextInt();
         }
 
@@ -38,185 +38,186 @@ public class JuegoCartas {
 
     }
 
-        public static void iniciarRonda(int num)
+    public static void iniciarRonda(int num)
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Aquí están tus cartas");
+
+        juegocartas.Carta.generarCartas();
+
+        juegocartas.Carta.mostrarCartas();
+
+        juegocartas.Carta.mostrarCartas0();
+
+        juegocartas.Carta.generarCartasOponente();
+        System.out.println();
+
+        juegocartas.Carta.mostrarCartas0();
+        System.out.println();
+
+        juegocartas.Juego.definirTurno();
+        System.out.println("Elige 3 cartas para usarlas: 1-9 / Otro Número-Pasar");
+        System.out.println();
+
+        System.out.println("Tus cartas" + "           |            " + "Cartas oponente") ;
+
+        while (numTurno < num)
         {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Aquí están tus cartas");
+            juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
 
-            juegocartas.Carta.generarCartas();
+            procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
 
-            juegocartas.Carta.mostrarCartaso();
-
-            juegocartas.Carta.generarCartasOponente();
-            System.out.println();
-
-            juegocartas.Carta.mostrarCartaso();
-            System.out.println();
-
-            juegocartas.Juego.definirTurno();
-            System.out.println("Elige 3 cartas para usarlas: 1-9 / 10-Pasar");
-            System.out.println();
-
-            System.out.println("Tus cartas" + "           |            " + "Cartas oponente");
-
-            while (numTurno < num)
-            {
-                juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-
-                procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
-
-            }
-
-            System.out.println();
-            juegocartas.Juego.compararCartas(juegocartas.Juego.turnoAoD);
-            juegocartas.Juego.resetearTotales();
-            juegocartas.Carta.resetearActivas();
         }
 
-        public static void procesoElegirCartas(int num)
-        {
-            switch (num) {
-                case 1:
-                    if (juegocartas.Carta.carta1.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta. Prueba otra");
+        System.out.println();
+        juegocartas.Juego.compararCartas(juegocartas.Juego.turnoAoD);
+        juegocartas.Juego.resetearTotales();
+        juegocartas.Carta.resetearActivas();
+    }
 
-                        juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+    public static void procesoElegirCartas(int num)
+    {
+        switch (num) {
+            case 1:
+                if (Carta.carta1.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta. Prueba otra");
 
-                        procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        juegocartas.Carta.carta1.mostrarCarta(1);
+                    juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
 
-                        juegocartas.Juego.sumarCarta(1);
+                    procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
+                } else {
+                    juegocartas.Carta.carta1.mostrarCarta(1);
 
-                        juegocartas.Carta.carta1.activa = true;
+                    juegocartas.Juego.sumarCarta(1);
 
-                        juegocartas.Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 2:
-                    if (juegocartas.Carta.carta2.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        Carta.carta2.mostrarCarta(2);
-                        Juego.sumarCarta(2);
-                        Carta.carta2.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 3:
-                    if (juegocartas.Carta.carta3.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        Carta.carta3.mostrarCarta(3);
-                        Juego.sumarCarta(3);
-                        Carta.carta3.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 4:
-                    if (juegocartas.Carta.carta4.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        Carta.carta4.mostrarCarta(4);
-                        Juego.sumarCarta(4);
-                        Carta.carta4.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 5:
-                    if (juegocartas.Carta.carta5.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        Carta.carta5.mostrarCarta(5);
-                        Juego.sumarCarta(5);
-                        Carta.carta5.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 6:
-                    if (juegocartas.Carta.carta6.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        juegocartas.Carta.carta6.mostrarCarta(6);
-                        Juego.sumarCarta(6);
-                        juegocartas.Carta.carta6.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 7:
-                    if (juegocartas.Carta.carta7.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        juegocartas.Carta.carta7.mostrarCarta(7);
-                        juegocartas.Juego.sumarCarta(7);
-                        juegocartas.Carta.carta7.activa = true;
-                        juegocartas.Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 8:
-                    if (juegocartas.Carta.carta8.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        juegocartas.Carta.carta8.mostrarCarta(8);
-                        Juego.sumarCarta(8);
-                        juegocartas. Carta.carta8.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                case 9:
-                    if (juegocartas.Carta.carta9.activa == true) {
-                        Scanner scanner = new Scanner(System.in);
-                        System.out.println("Ya has elegido esa carta, prueba con otra");
-                        Juego.juegoUsuario.cartaUsada = scanner.nextInt();
-                        procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
-                    } else {
-                        Carta.carta9.mostrarCarta(9);
-                        Juego.sumarCarta(9);
-                        Carta.carta9.activa = true;
-                        Juego.respuestaOponente();
-                        numTurno++;
-                    }
-                    break;
-                default:
-                    System.out.println("Has elegido pasar   ");
+                    juegocartas.Carta.carta1.activa = true;
+
+                    juegocartas.Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 2:
+                if (Carta.carta2.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
+                } else {
+                    Carta.carta2.mostrarCarta(2);
+                    Juego.sumarCarta(2);
+                    Carta.carta2.activa = true;
                     Juego.respuestaOponente();
                     numTurno++;
-                    break;
-            }
-
-
+                }
+                break;
+            case 3:
+                if (Carta.carta3.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
+                } else {
+                    Carta.carta3.mostrarCarta(3);
+                    Juego.sumarCarta(3);
+                    Carta.carta3.activa = true;
+                    Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 4:
+                if (Carta.carta4.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
+                } else {
+                    Carta.carta4.mostrarCarta(4);
+                    Juego.sumarCarta(4);
+                    Carta.carta4.activa = true;
+                    Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 5:
+                if (Carta.carta5.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
+                } else {
+                    Carta.carta5.mostrarCarta(5);
+                    Juego.sumarCarta(5);
+                    Carta.carta5.activa = true;
+                    Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 6:
+                if (Carta.carta6.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
+                } else {
+                    juegocartas.Carta.carta6.mostrarCarta(6);
+                    Juego.sumarCarta(6);
+                    juegocartas.Carta.carta6.activa = true;
+                    Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 7:
+                if (Carta.carta7.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    juegocartas.Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
+                } else {
+                    juegocartas.Carta.carta7.mostrarCarta(7);
+                    juegocartas.Juego.sumarCarta(7);
+                    juegocartas.Carta.carta7.activa = true;
+                    juegocartas.Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 8:
+                if (Carta.carta8.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(juegocartas.Juego.juegoUsuario.cartaUsada);
+                } else {
+                    juegocartas.Carta.carta8.mostrarCarta(8);
+                    Juego.sumarCarta(8);
+                    juegocartas. Carta.carta8.activa = true;
+                    Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            case 9:
+                if (Carta.carta9.activa) {
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Ya has elegido esa carta, prueba con otra");
+                    Juego.juegoUsuario.cartaUsada = scanner.nextInt();
+                    procesoElegirCartas(Juego.juegoUsuario.cartaUsada);
+                } else {
+                    Carta.carta9.mostrarCarta(9);
+                    Juego.sumarCarta(9);
+                    Carta.carta9.activa = true;
+                    Juego.respuestaOponente();
+                    numTurno++;
+                }
+                break;
+            default:
+                System.out.println("Has elegido pasar   ");
+                Juego.respuestaOponente();
+                numTurno++;
+                break;
         }
 
 
     }
 
+
+}
