@@ -42,8 +42,10 @@ public class JuegoCartas {
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Aquí están tus cartas");
-
-        juegocartas.Carta.generarCartas();
+  if (numTurno == 0) {
+                juegocartas.Carta.generarCartas();
+            }
+   
 
         juegocartas.Carta.mostrarCartas();
 
