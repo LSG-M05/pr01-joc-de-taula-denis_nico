@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/PR_Javaa.iml" filepath="$PROJECT_DIR$/PR_Javaa.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/m03uf2.iml" filepath="$PROJECT_DIR$/m03uf2.iml" />
+>>>>>>> c2324ba751aff322729bda0230045cd537ce8785
     </modules>
   </component>
 </project>
