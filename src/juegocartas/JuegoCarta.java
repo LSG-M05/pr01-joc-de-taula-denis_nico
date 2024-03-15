@@ -42,7 +42,9 @@ public class JuegoCartas {
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Aquí están tus cartas");
-  if (numTurno == 0) {
+  
+        // para que solo juege con las cartas generadas en la ronda 1
+        if (numTurno == 0) {
                 juegocartas.Carta.generarCartas();
             }
    
