@@ -1,8 +1,8 @@
 # 🃏 Juego de Cartas - README 🏆
 
 ## Integrantes del Equipo 🤝
-- Nicolás Martínez
-- Andrea García
+- Nico Vehí
+- Denis Podovei
 
 ## Temática del Programa 🎮
 
