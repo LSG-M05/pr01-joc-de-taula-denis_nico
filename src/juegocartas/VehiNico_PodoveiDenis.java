@@ -75,12 +75,12 @@ public class VehiNico_PodoveiDenis {
             Carta.generarCartas();
         }
 
-        // Mostrar las cartas del jugador y del oponente
+        // Mostrar las cartas del jugador
         juegocartas.Carta.mostrarCartas();
-        juegocartas.Carta.mostrarCartas0();
+    
         juegocartas.Carta.generarCartasOponente();
         System.out.println();
-        juegocartas.Carta.mostrarCartas0();
+        
         System.out.println();
 
         // Definir el turno (ataque o defensa) y pedir al jugador que elija sus cartas
