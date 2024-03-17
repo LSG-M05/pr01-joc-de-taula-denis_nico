@@ -3,7 +3,7 @@ package juegocartas;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class JuegoCartas {
+public class VehiNico_PodoveiDenis {
 
     static int numTurno; // Contador de turnos
 
