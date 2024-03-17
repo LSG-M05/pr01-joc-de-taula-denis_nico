@@ -156,7 +156,6 @@ public class  Juego {
     public static void sumarCartaOponente(int numo) {
         switch (numo) {
             case 1 -> {
-<<<<<<< HEAD
                 juegoOponente.sumaAtaque += Carta.carta01.ataque;
                 juegoOponente.sumaDefensa += Carta.carta01.defensa;
             }
@@ -194,48 +193,6 @@ public class  Juego {
             }
             default -> {
             }
-
-=======
-                juegoUsuario.sumaAtaque += Carta.carta01.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta01.defensa;
-            }
-            case 2 -> {
-                juegoUsuario.sumaAtaque += Carta.carta02.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta02.defensa;
-            }
-            case 3 -> {
-                juegoUsuario.sumaAtaque += Carta.carta03.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta03.defensa;
-            }
-            case 4 -> {
-                juegoUsuario.sumaAtaque += Carta.carta04.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta04.defensa;
-            }
-            case 5 -> {
-                juegoUsuario.sumaAtaque += Carta.carta05.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta05.defensa;
-            }
-            case 6 -> {
-                juegoUsuario.sumaAtaque += Carta.carta06.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta06.defensa;
-            }
-            case 7 -> {
-                juegoUsuario.sumaAtaque += Carta.carta07.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta07.defensa;
-            }
-            case 8 -> {
-                juegoUsuario.sumaAtaque += Carta.carta08.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta08.defensa;
-            }
-            case 9 -> {
-                juegoUsuario.sumaAtaque += Carta.carta09.ataque;
-                juegoUsuario.sumaDefensa += Carta.carta09.defensa;
-            }
-            default -> {
-            }
->>>>>>> c2324ba751aff322729bda0230045cd537ce8785
-        }
-    }
 
 
     // El método define de forma aleatoria quién atacará y quién defenderá durante la ronda
